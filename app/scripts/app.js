@@ -34,7 +34,17 @@ angular
         controller: 'TesteCtrl',
         controllerAs: 'teste'
       })
-      .otherwise({
+      .when('/cadastroContatos', {
+        templateUrl: 'views/cadastrocontatos.html',
+        controller: 'CadastrocontatosCtrl',
+        controllerAs: 'cadastroContatos'
+      })
+    .when('/listaContatos', {
+      templateUrl: 'views/listacontatos.html',
+      controller: 'ListacontatosCtrl',
+      controllerAs: 'listaContatos'
+    })
+    .otherwise({
         redirectTo: '/'
       });
   });
